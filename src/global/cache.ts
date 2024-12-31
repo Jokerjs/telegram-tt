@@ -146,6 +146,7 @@ async function readCache(initialState: GlobalState): Promise<GlobalState> {
   if (cachedFromLocalStorage) localStorage.removeItem(GLOBAL_STATE_CACHE_KEY);
 
   const cached = cachedFromLocalStorage || await loadCachedGlobal();
+  console.log('===========cached', cached);
 
   if (DEBUG) {
     // eslint-disable-next-line no-console

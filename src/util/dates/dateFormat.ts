@@ -307,8 +307,9 @@ const formatDayToStringWithCache = withCache((
   monthFormat: 'short' | 'long' | 'numeric' = 'short',
   noDay?: boolean,
 ) => {
+  const localeStr = locale === 'zh-hans-beta' ? 'zh-CN' : locale;
   return new Date(dayStartAt).toLocaleString(
-    locale,
+    localeStr,
     {
       year: noYear ? undefined : 'numeric',
       month: monthFormat,
@@ -335,8 +336,9 @@ export function formatDateTimeToString(
   timeFormat?: TimeFormat,
 ) {
   const date = typeof datetime === 'number' ? new Date(datetime) : datetime;
+  const localeStr = locale === 'zh-hans-beta' ? 'zh-CN' : locale;
   return date.toLocaleString(
-    locale,
+    localeStr,
     {
       year: 'numeric',
       month: 'short',

@@ -27,6 +27,7 @@ const PLURAL_OPTIONS = ['value', 'zeroValue', 'oneValue', 'twoValue', 'fewValue'
 // Some rules edited from https://github.com/eemeli/make-plural/blob/master/packages/plurals/cardinals.js
 const PLURAL_RULES = {
   /* eslint-disable max-len */
+  'zh-CN': (n: number) => (n !== 1 ? 6 : 2),
   en: (n: number) => (n !== 1 ? 6 : 2),
   ar: (n: number) => (n === 0 ? 1 : n === 1 ? 2 : n === 2 ? 3 : n % 100 >= 3 && n % 100 <= 10 ? 4 : n % 100 >= 11 ? 5 : 6),
   be: (n: number) => {

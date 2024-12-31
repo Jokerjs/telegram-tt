@@ -256,7 +256,7 @@ export const INITIAL_GLOBAL_STATE: GlobalState = {
       shouldSuggestStickers: true,
       shouldSuggestCustomEmoji: true,
       shouldUpdateStickerSetOrder: true,
-      language: 'en',
+      language: 'zh-hans-beta',
       timeFormat: '24h',
       wasTimeFormatSetManually: false,
       isConnectionStatusMinimized: true,
